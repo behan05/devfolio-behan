@@ -36,10 +36,12 @@ To view this portfolio locally, follow the steps below:
 # 👤 About Me
 I’m Behan Kumar, a motivated and enthusiastic full-stack developer with a passion for building web applications. My goal is to continuously improve my skills and contribute to meaningful projects. Check out my LinkedIn profile for more information.
 
-# 📬 Contact
-Email: behankrbth@outlook.com
-LinkedIn: linkedin.com/in/behan-kumar
-GitHub: github.com/behan05
+## 📬 Contact
+
+- **Email**: [behankrbth@outlook.com](mailto:behankrbth@outlook.com)<br>
+- **LinkedIn**: [linkedin.com/in/behan-kumar](https://www.linkedin.com/in/behan-kumar)<br>
+- **GitHub**: [github.com/behan05](https://github.com/behan05)
+
 
 # 📂 Folder Structure
  ```bash
