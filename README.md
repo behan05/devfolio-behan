@@ -30,7 +30,7 @@ To view this portfolio locally, follow the steps below:
 1. Clone the repository:
 
  ```bash
-   git clone https://github.com/behan05/portfolio.git
+   git clone https://github.com/behan05/devfolio-behan.git
 ```
 
 # 👤 About Me
