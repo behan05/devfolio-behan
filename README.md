@@ -42,6 +42,7 @@ LinkedIn: linkedin.com/in/behan-kumar
 GitHub: github.com/behan05
 
 # 📂 Folder Structure
+ ```bash
 portfolio/
 ├── client/              # Frontend files (HTML, CSS, JavaScript, etc.)
 │   ├── assets/          # Contains images, icons, and other media files
@@ -57,6 +58,6 @@ portfolio/
 │   └── package.json     # Backend dependencies and configurations
 ├── README.md            # Project documentation
 └── package.json         # Overall project dependencies (for both client & server)
-
+ ```
 # Thank You!
 Thank you for visiting my portfolio repository! 😊 Feel free to connect with me if you'd like to discuss collaboration opportunities or learn more about my work.
