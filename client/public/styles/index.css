@@ -1,0 +1,73 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header__logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.header__menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header__menu li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.header__menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+.header__menu a:hover {
+  color: #ff6347; /* Tomato color for hover */
+}
+
+.header__menu li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.header__menu li:hover > ul {
+  display: block;
+}
+
+.header__menu li ul li {
+  margin: 5px 0;
+}
+
+.header__menu li ul li a {
+  color: white;
+  font-size: 1em;
+}
+
+.header__menu li ul li a:hover {
+  color: #ff6347;
+}
