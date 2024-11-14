@@ -1,0 +1,5 @@
+# ignore to push node_modules
+node_modules
+
+# ignore to push environment
+.env

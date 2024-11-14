@@ -1,0 +1,44 @@
+{
+  "name": "portfolio-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "server",
+    "express"
+  ],
+  "author": "Behan Kumar",
+  "license": "MIT",
+  "description": "A simple Express server for my portfolio project.",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/behan05/devfolio-behan.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/behan05/devfolio-behan/issues"
+  },
+  "homepage": "https://github.com/behan05/devfolio-behan#readme",
+  "contributors": [
+    {
+      "name": "Behan Kumar",
+      "email": "behankrbth@outlook.com",
+      "url": "https://github.com/behan05"
+    }
+  ],
+  "private": true
+}
