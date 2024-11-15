@@ -1,46 +1,66 @@
 /* Global Styles */
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --buttonBgColor: #5ddfd7;
+}
+body {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #212a36;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
 header {
-  background-color: #333;
   color: white;
-  padding: 10px 20px;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 #header__logo {
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: 1.2em;
+  font-weight: 600;
+  font-family: "Poppins", serif;
+}
+#header__logo span {
+  color: var(--buttonBgColor);
 }
 
 .header__menu ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   display: flex;
 }
 
 .header__menu li {
-  margin: 0 15px;
+  margin: 0 1em;
   position: relative;
+  padding: 0.5rem 1.2rem;
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
+.header__menu li:hover {
+  box-shadow: 0 0 0.1rem 0.1rem #38465a;
+  border-radius: 12px;
 }
 
 .header__menu a {
-  color: white;
+  color: #8d9198;
   text-decoration: none;
   font-size: 1.1em;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
+  letter-spacing: 0.1rem;
 }
 
 .header__menu a:hover {
-  color: #ff6347; /* Tomato color for hover */
+  color: var(--buttonBgColor);
 }
 
 .header__menu li ul {
@@ -48,11 +68,10 @@ header {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #333;
+  background-color: #262c35;
   list-style-type: none;
-  margin: 0;
-  padding: 10px;
-  border-radius: 5px;
+  border-radius: 12px;
+  box-shadow: 0 0 0.1rem 0.1rem #38465a;
 }
 
 .header__menu li:hover > ul {
@@ -66,8 +85,9 @@ header {
 .header__menu li ul li a {
   color: white;
   font-size: 1em;
+  letter-spacing: 0.1rem;
 }
 
 .header__menu li ul li a:hover {
-  color: #ff6347;
+  color: var(--buttonBgColor);
 }
