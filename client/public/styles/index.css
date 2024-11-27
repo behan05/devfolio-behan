@@ -22,7 +22,9 @@ body {
   font-style: normal;
   background-color: #212a36;
 }
-
+p::selection {
+  color: var(--buttonBgColor);
+}
 header {
   color: var(--textPrimeColor);
   padding: 1.5rem;
@@ -137,6 +139,7 @@ p {
   text-shadow: 0 0 0.1rem #000;
   color: var(--textSecondaryColor);
 }
+
 #first__Section .leftBox h1 {
   color: var(--buttonBgColor);
 }
