@@ -7,22 +7,31 @@
 
 :root {
   --buttonBgColor: #5ddfd7;
+  --textPrimeColor: #fff;
+  --textSecondaryColor: #8d9198;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 body {
   font-family: "Poppins", serif;
   font-weight: 400;
   font-style: normal;
   background-color: #212a36;
-  height: 100vh;
-  overflow-x: hidden;
 }
 
 header {
-  color: white;
+  color: var(--textPrimeColor);
   padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
+  position: relative;
+  z-index: 999;
 }
 
 #header__logo {
@@ -45,6 +54,9 @@ header {
   padding: 0.5rem 1.2rem;
   transition: box-shadow 0.3s ease, border-radius 0.3s ease;
 }
+.header__menu ul #social-icon {
+  color: var(--buttonBgColor);
+}
 
 .header__menu li:hover {
   box-shadow: 0 0 0.1rem 0.1rem #38465a;
@@ -52,7 +64,7 @@ header {
 }
 
 .header__menu a {
-  color: #8d9198;
+  color: var(--textSecondaryColor);
   text-decoration: none;
   font-size: 1.1em;
   transition: color 0.3s ease;
@@ -83,11 +95,371 @@ header {
 }
 
 .header__menu li ul li a {
-  color: white;
+  color: var(--textPrimeColor);
   font-size: 1em;
   letter-spacing: 0.1rem;
 }
 
 .header__menu li ul li a:hover {
   color: var(--buttonBgColor);
+}
+
+/* Menu Icons */
+
+.openMenu {
+  display: none;
+}
+.closeMenu {
+  display: none;
+}
+
+/*First Page Main Section STYLING  */
+
+section {
+  height: 100%;
+}
+
+#first__Section {
+  display: flex;
+  padding: 20px;
+}
+#first__Section .leftBox {
+  flex: 1;
+  height: 100%;
+  padding: 12rem 0;
+}
+#first__Section .leftBox h1,
+p {
+  padding: 0 0 1.5rem 0;
+  letter-spacing: 0.1rem;
+  text-align: justify;
+  line-height: 1.8rem;
+  text-shadow: 0 0 0.1rem #000;
+  color: var(--textSecondaryColor);
+}
+#first__Section .leftBox h1 {
+  color: var(--buttonBgColor);
+}
+
+#first__Section .cta-button {
+  padding: 1rem 1.5rem;
+  margin: 4rem 0;
+  border-radius: 12px;
+  box-shadow: 0 0 0.2rem var(--buttonBgColor);
+  color: var(--buttonBgColor);
+  text-shadow: 0 0 0.1rem #000;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  backdrop-filter: blur(100px);
+  transition: padding 0.8s ease, box-shadow 0.2s ease;
+}
+
+#first__Section .cta-button:hover {
+  padding: 1rem 2rem;
+  box-shadow: 0 0 0.4rem var(--textPrimeColor);
+}
+
+#first__Section .rightBox {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+#first__Section .rightBox img {
+  max-height: 80%;
+  max-width: 80%;
+  object-fit: cover;
+}
+
+/* Second Page Main Section STYLING */
+
+#second__section {
+  display: flex;
+  height: 70%;
+  width: 100%;
+  position: relative;
+}
+
+#second__section .leftBox {
+  flex: 0.4;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+#second__section .leftBox .imgBox {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--buttonBgColor);
+  padding: 0.2rem;
+  box-shadow: 0 0 0.5rem var(--buttonBgColor);
+}
+
+#second__section .leftBox .imgBox img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+#second__section .leftBox .imgBox img:hover {
+  transform: rotate(12deg) scale(1.4);
+}
+
+#second__section .leftBox h3 {
+  color: var(--textPrimeColor);
+  padding: 1rem;
+  font-weight: 400;
+  font-family: sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+#second__section .leftBox .social-icon {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+#second__section .leftBox .social-icon a {
+  text-decoration: none;
+  padding: 1rem;
+  transition: border 0.8s ease, border-radius 0.8s ease;
+}
+
+#second__section .leftBox .social-icon a:hover {
+  border: 1px solid var(--buttonBgColor);
+  border-radius: 12px;
+}
+
+#second__section .leftBox .social-icon i {
+  font-size: 1.5rem;
+  color: var(--buttonBgColor);
+}
+
+#second__section .rightBox {
+  flex: 1;
+  height: 100%;
+  padding: 4rem;
+}
+#second__section .rightBox h2 {
+  padding: 0 0 1.5rem 0;
+  letter-spacing: 0.1rem;
+  text-align: justify;
+  line-height: 1.8rem;
+  text-shadow: 0 0 0.1rem #000;
+  color: var(--buttonBgColor);
+}
+#second__section .rightBox p {
+  padding: 0 8rem 0 0;
+  letter-spacing: 0.1rem;
+  text-align: justify;
+  line-height: 1.8rem;
+  /* background-color: red; */
+  text-shadow: 0 0 0.1rem #000;
+  color: var(--textSecondaryColor);
+}
+
+/* Footer STYLING */
+
+footer {
+  background-color: #181e27;
+  color: var(--textPrimeColor);
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links a {
+  color: var(--textPrimeColor);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* For phones (up to 600px) */
+@media only screen and (max-width: 600px) {
+  .header__menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5rem;
+  }
+
+  .header__menu ul {
+    flex-direction: column;
+    backdrop-filter: blur(12px);
+    box-shadow: inset 0 0 0.1rem 0.1rem #38465a;
+    border-radius: 12px;
+  }
+
+  .header__menu ul li {
+    margin: 0.2rem 0;
+  }
+
+  .openMenu {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .closeMenu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  /* Main Styling */
+  #first__Section {
+    flex-direction: column;
+  }
+  #first__Section .leftBox {
+    padding: 1rem 0;
+  }
+  #first__Section .leftBox h1 {
+    text-align: initial;
+  }
+
+  #first__Section .rightBox {
+    text-align: center;
+  }
+
+  /* SecondBox Style */
+  #second__section {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  #second__section .leftBox {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #second__section .rightBox {
+    padding: 20px;
+  }
+
+  #second__section .leftBox .social-icon {
+    justify-content: center;
+  }
+
+  #second__section .rightBox p {
+    padding: initial;
+  }
+
+  /* Footer */
+
+  footer {
+    display: none;
+  }
+}
+
+/* For tablets and laptops (601px to 1024px) */
+@media only screen and (min-width: 601px) and (max-width: 1397px) {
+  .header__menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5rem;
+  }
+
+  .header__menu ul {
+    flex-direction: column;
+    backdrop-filter: blur(12px);
+    box-shadow: inset 0 0 0.1rem 0.1rem #38465a;
+    border-radius: 12px;
+  }
+
+  .header__menu ul li {
+    margin: 0.2rem 0;
+  }
+
+  .openMenu {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .closeMenu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  /* Main Styling */
+
+  #first__Section .leftBox {
+    width: 50%;
+    padding: 3rem 0;
+  }
+
+  #first__Section .rightBox {
+    width: 50%;
+    padding: 3rem 0;
+  }
+
+  #first__Section .rightBox img {
+    margin: 2rem 0;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* SecondBox */
+  #second__section .leftBox .imgBox {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--buttonBgColor);
+    padding: 0.2rem;
+    margin: 0 1rem;
+    box-shadow: 0 0 0.5rem var(--buttonBgColor);
+  }
+
+  #second__section .leftBox .imgBox img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+  }
+  #second__section .rightBox p {
+    padding: initial;
+  }
+  /* Footer */
+
+  footer {
+    display: none;
+  }
+}
+
+@media (min-width: 1398px) {
+  .openMenu,
+  .closeMenu {
+    display: none;
+  }
+  .header__menu {
+    display: block;
+  }
 }

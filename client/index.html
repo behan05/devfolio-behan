@@ -1,52 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags for character encoding, viewport settings, and description -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Behan Kumar's portfolio showcasing full-stack web development skills with projects and expertise in front-end and back-end technologies."
+    />
+
     <title>index</title>
+
+    <!-- Link to the external CSS file for styling -->
     <link rel="stylesheet" href="./public/styles/index.css" />
 
-    <!-- Google font CDN -->
+    <!-- Google font CDN for custom fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Remix Icon CDN for icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!-- Start Header -->
+    <!-- Start Header Section -->
     <header>
+      <!-- Logo Section -->
       <div id="header__logo">
         <span>&lt;/</span>👨‍💻BEHAN KUMAR <span>&gt;</span>
+        <!-- Display the logo with Behan's name -->
       </div>
+
+      <!-- Navigation Menu -->
       <nav class="header__menu">
         <ul>
           <li><a href="#">My Space</a></li>
+          <!-- Link to 'My Space' section -->
           <li><a href="#">Resume Vault</a></li>
+          <!-- Link to 'Resume Vault' section -->
           <li><a href="#">Work Showcase</a></li>
+          <!-- Link to 'Work Showcase' section -->
           <li><a href="#">Expertise</a></li>
+          <!-- Link to 'Expertise' section -->
           <li><a href="#">Let’s Connect</a></li>
-          <li>
+          <!-- Link to 'Let’s Connect' section -->
+
+          <!-- Social Proof Section (dropdown with social links) -->
+          <li id="social-icon">
             Social Proof
             <ul>
-              <li><a href="#">GitHub Showcase</a></li>
-              <li><a href="#">Professional Network</a></li>
-              <li><a href="#">Pen Showcase</a></li>
+              <li>
+                <a href="https://github.com/behan05" target="_blank"
+                  >GitHub Showcase</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/behan-kumar"
+                  target="_blank"
+                  >Professional Network</a
+                >
+              </li>
+              <li>
+                <a href="https://codepen.io/behan05" target="_blank"
+                  >Pen Showcase</a
+                >
+              </li>
             </ul>
           </li>
         </ul>
       </nav>
-    </header>
-    <!-- End Header -->
 
-    <!-- Adding GSAP CDN -->
+      <!-- Mobile Menu Icons (open and close icons) -->
+      <i class="ri-menu-3-line openMenu"></i>
+      <i class="ri-close-large-line closeMenu"></i>
+    </header>
+    <!-- End Header Section -->
+
+    <!-- Main Section -->
+    <section id="first__Section">
+      <div class="leftBox">
+        <!-- Headline and Introduction Text -->
+        <h1>Showcasing My Digital Craftsmanship</h1>
+        <p>
+          Explore my portfolio, where each project reflects my commitment to
+          combining creativity with technology. From intuitive user interfaces
+          to robust backend systems, every piece of work highlights my journey
+          in innovation. I specialize in crafting seamless digital experiences,
+          whether it's designing for user engagement or developing scalable
+          solutions. Driven by a passion for excellence and problem-solving, I
+          strive to deliver meaningful value in every project. Let's collaborate
+          and turn your vision into a reality!
+        </p>
+
+        <!-- Call to Action Button -->
+        <a href="#" class="cta-button">Browse My Work</a>
+      </div>
+
+      <div class="rightBox">
+        <!-- Image illustrating digital technology -->
+        <img
+          src="./public/images/landing-illutrate.jpeg"
+          alt="Illustration of digital technology and collaboration"
+          style="user-select: none"
+          draggable="true"
+        />
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="second__section">
+      <div class="leftBox">
+        <div class="imgBox">
+          <!-- Profile Image -->
+          <img
+            src="./public/images/behan.png"
+            alt="behan profile image"
+            draggable="true"
+            title="Hey there!"
+          />
+        </div>
+        <h3>👨‍💻Behan Kumar</h3>
+
+        <!-- Social Media Icons -->
+        <div class="social-icon">
+          <a href="mailto:behankrbth@outlook.com"
+            ><i class="ri-mail-ai-line"></i
+          ></a>
+          <a href="https://github.com/behan05" target="_blank"
+            ><i class="ri-github-line"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/behan-kumar" target="_blank"
+            ><i class="ri-linkedin-fill"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="rightBox">
+        <!-- Developer Introduction Text -->
+        <h2>Meet the Developer</h2>
+        <p>
+          Hi! I'm Behan Kumar, a passionate Full-Stack Developer with a strong
+          foundation in web development. I enjoy creating interactive and
+          user-friendly applications that combine beautiful design with powerful
+          functionality. I specialize in technologies such as HTML5, CSS3,
+          JavaScript, and GSAP for front-end development, while leveraging
+          Node.js, Express.js, and MongoDB for back-end solutions. Currently,
+          I’m exploring advanced frameworks like React and Redux, and I
+          constantly strive to expand my skill set. Beyond coding, I love
+          solving real-world problems through innovative ideas.
+          <br /><br /><br />
+
+          My dream is to build a platform that fosters connection and empathy,
+          including projects like a Video Call Chat WebApp aimed at helping
+          people who feel isolated. When I'm not coding, I enjoy diving into new
+          learning resources, brainstorming unique project ideas, and taking
+          small steps towards my ultimate goal of making a positive impact on
+          people's lives. Feel free to connect with me via
+          <a href="https://github.com/behan05" target="_blank"><b>GitHub</b></a>
+          or
+          <a href="https://www.linkedin.com/in/behan-kumar" target="_blank"
+            ><b>LinkedIn</b></a
+          >. Let's create something amazing together!
+        </p>
+      </div>
+    </section>
+    <!-- End Main Section -->
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-container">
+        <!-- Footer Text -->
+        <p>&copy; 2024 <strong>Behan Kumar</strong>. All rights reserved.</p>
+
+        <!-- Footer Links -->
+        <div class="footer-links">
+          <a href="https://github.com/behan05" target="_blank">GitHub</a> |
+          <a href="https://www.linkedin.com/in/behan-kumar" target="_blank"
+            >LinkedIn</a
+          >
+          |
+          <a href="mailto:behankrbth@outlook.com">Reach Out</a>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    <!-- Adding GSAP CDN for animations -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src=""></script>
+
+    <!-- Link to your custom JavaScript file for handling interactions -->
+    <script src="./public/scripts/index.js"></script>
   </body>
 </html>
