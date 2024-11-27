@@ -11,13 +11,73 @@
     <!-- Fav Icon -->
     <link
       rel="shortcut icon"
-      href="./public/images/fav-icon.webp"
+      href="../public/images/fav-icon.webp"
       type="image/x-icon"
     />
     <!-- Link to the external CSS file for styling -->
-    <link rel="stylesheet" href="./public/styles/index.css" />
+    <link rel="stylesheet" href="../public/styles/contact.css" />
+
+    <!-- Remix CDN LINK -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <!-- Start Header Section -->
+    <header>
+      <!-- Logo Section -->
+      <div id="header__logo">
+        <span>&lt;/</span>👨‍💻BEHAN KUMAR <span>&gt;</span>
+        <!-- Display the logo with Behan's name -->
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="header__menu">
+        <ul>
+          <li><a href="#">My Space</a></li>
+          <!-- Link to 'My Space' section -->
+          <li><a href="#">Resume Vault</a></li>
+          <!-- Link to 'Resume Vault' section -->
+          <li><a href="#">Work Showcase</a></li>
+          <!-- Link to 'Work Showcase' section -->
+          <li><a href="#">Expertise</a></li>
+          <!-- Link to 'Expertise' section -->
+          <li><a href="#">Let’s Connect</a></li>
+          <!-- Link to 'Let’s Connect' section -->
+
+          <!-- Social Proof Section (dropdown with social links) -->
+          <li id="social-icon">
+            Social Proof
+            <ul>
+              <li>
+                <a href="https://github.com/behan05" target="_blank"
+                  >GitHub Showcase</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/behan-kumar"
+                  target="_blank"
+                  >Professional Network</a
+                >
+              </li>
+              <li>
+                <a href="https://codepen.io/behan05" target="_blank"
+                  >Pen Showcase</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Icons (open and close icons) -->
+      <i class="ri-menu-3-line openMenu"></i>
+      <i class="ri-close-large-line closeMenu"></i>
+    </header>
+    <!-- End Header Section -->
+
     <section id="contact">
       <div class="contact-container">
         <!-- Contact Section Heading -->
@@ -29,7 +89,7 @@
 
         <!-- Contact Form -->
         <form
-          action="https://formspree.io/f/YOUR_FORM_ID"
+          action="#"
           method="POST"
           class="contact-form"
         >
@@ -58,18 +118,18 @@
           <textarea
             id="message"
             name="message"
-            rows="5"
+            rows="12"
             placeholder="Write your message here..."
             required
           ></textarea>
 
           <!-- Submit Button -->
-          <button type="submit" class="cta-button">Send Message</button>
+          <button type="submit" class="cta-button">Drop Me a Line</button>
         </form>
 
         <!-- Quick Links -->
         <div class="contact-links">
-          <p>Or reach out directly:</p>
+          <p><span>|</span> Or reach out directly <span>|</span></p>
           <a href="mailto:behankrbth@outlook.com" target="_blank">
             <i class="ri-mail-line"></i> behankrbth@outlook.com
           </a>
@@ -82,5 +142,14 @@
         </div>
       </div>
     </section>
+
+    <!-- GSAP CDN LINK -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../public/scripts/contact.js"></script>
   </body>
 </html>
