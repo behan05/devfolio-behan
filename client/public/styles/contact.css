@@ -9,10 +9,11 @@ body {
   height: 100%;
 }
 
+/* Define root variables for colors */
 :root {
-  --buttonBgColor: #5ddfd7;
-  --textPrimeColor: #fff;
-  --textSecondaryColor: #8d9198;
+  --buttonBgColor: #008b8b; /* Background color for buttons */
+  --textPrimeColor: #fff; /* Primary text color */
+  --textSecondaryColor: #8d9198; /* Secondary text color */
 }
 
 body {

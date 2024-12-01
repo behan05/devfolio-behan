@@ -1,113 +1,136 @@
-/* Global Styles */
+/* Reset margin, padding, and box-sizing for all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Define root variables for colors */
 :root {
-  --buttonBgColor: #5ddfd7;
-  --textPrimeColor: #fff;
-  --textSecondaryColor: #8d9198;
+  --buttonBgColor: #008b8b; /* Background color for buttons */
+  --textPrimeColor: #fff; /* Primary text color */
+  --textSecondaryColor: #8d9198; /* Secondary text color */
 }
 
+/* Set the width and height to occupy the entire viewport */
 html,
 body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
+
+/* Apply general styling for the body */
 body {
-  font-family: "Poppins", serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #212a36;
+  font-family: "Poppins", serif; /* Set the font to Poppins */
+  font-weight: 400; /* Normal font weight */
+  font-style: normal; /* Default font style */
+  background-color: #212a36; /* Dark background color */
+  overflow-x: hidden;
 }
+
+/* Highlight the selected text in paragraphs */
 p::selection {
-  color: var(--buttonBgColor);
+  color: var(--buttonBgColor); /* Change text color on selection */
 }
+
+/* Style the header */
 header {
-  color: var(--textPrimeColor);
-  padding: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  z-index: 999;
+  color: var(--textPrimeColor); /* Primary text color */
+  padding: 1.5rem; /* Add padding around the header */
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Align items vertically */
+  user-select: none; /* Disable text selection */
+  position: relative; /* Relative position for stacking */
+  z-index: 999; /* High stacking order */
 }
 
+/* Header logo styling */
 #header__logo {
-  font-size: 1.2em;
-  font-weight: 600;
-  font-family: "Poppins", serif;
+  font-size: 1.3em; /* Increase font size */
+  font-weight: 600; /* Semi-bold font */
+  font-family: "Poppins", serif; /* Set font family */
 }
+
+/* Color styling for a specific span inside the logo */
 #header__logo span {
-  color: var(--buttonBgColor);
+  color: var(--buttonBgColor); /* Button background color */
 }
 
+/* Styling for header menu lists */
 .header__menu ul {
-  list-style-type: none;
-  display: flex;
+  list-style-type: none; /* Remove bullet points */
+  display: flex; /* Display items in a row */
 }
 
+/* Styling for header menu list items */
 .header__menu li {
-  margin: 0 1em;
-  position: relative;
-  padding: 0.5rem 1.2rem;
-  transition: box-shadow 0.3s ease, border-radius 0.3s ease;
+  margin: 0 1em; /* Add horizontal margin */
+  position: relative; /* Position for dropdown */
+  padding: 0.5rem 1.2rem; /* Add padding */
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease; /* Add smooth effects */
 }
+
+/* Specific ID styling for social icons in the menu */
 .header__menu ul #social-icon {
-  color: var(--buttonBgColor);
+  color: var(--buttonBgColor); /* Button background color */
 }
 
+/* Hover effect for menu items */
 .header__menu li:hover {
-  box-shadow: 0 0 0.1rem 0.1rem #38465a;
-  border-radius: 12px;
+  box-shadow: 0 0 0.1rem 0.1rem #38465a; /* Add shadow */
+  border-radius: 12px; /* Round corners */
 }
 
+/* Anchor styling inside menu items */
 .header__menu a {
-  color: var(--textSecondaryColor);
-  text-decoration: none;
-  font-size: 1.1em;
-  transition: color 0.3s ease;
-  letter-spacing: 0.1rem;
+  color: var(--textSecondaryColor); /* Secondary text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.1em; /* Set font size */
+  transition: color 0.3s ease; /* Smooth color transition */
+  letter-spacing: 0.1rem; /* Space between letters */
 }
 
+/* Hover effect for anchor tags */
 .header__menu a:hover {
-  color: var(--buttonBgColor);
+  color: var(--buttonBgColor); /* Button background color */
 }
 
+/* Styling for dropdown menu inside header */
 .header__menu li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #262c35;
-  list-style-type: none;
-  border-radius: 12px;
-  box-shadow: 0 0 0.1rem 0.1rem #38465a;
+  display: none; /* Hide dropdown initially */
+  position: absolute; /* Position relative to parent */
+  top: 100%; /* Place below parent item */
+  left: 0; /* Align to the left */
+  background-color: #262c35; /* Dark background color */
+  list-style-type: none; /* Remove bullet points */
+  border-radius: 12px; /* Round corners */
+  box-shadow: 0 0 0.1rem 0.1rem #38465a; /* Add shadow */
 }
 
+/* Show dropdown menu on hover */
 .header__menu li:hover > ul {
-  display: block;
+  display: block; /* Show dropdown */
 }
 
+/* Style individual dropdown items */
 .header__menu li ul li {
-  margin: 5px 0;
+  margin: 5px 0; /* Add vertical margin */
 }
 
+/* Style anchor tags in dropdown */
 .header__menu li ul li a {
-  color: var(--textPrimeColor);
-  font-size: 1em;
-  letter-spacing: 0.1rem;
+  color: var(--textPrimeColor); /* Primary text color */
+  font-size: 1em; /* Set font size */
+  letter-spacing: 0.1rem; /* Space between letters */
 }
 
+/* Hover effect for dropdown anchor tags */
 .header__menu li ul li a:hover {
-  color: var(--buttonBgColor);
+  color: var(--buttonBgColor); /* Button background color */
 }
 
-/* Menu Icons */
-
+/* Hide menu icons by default */
 .openMenu {
   display: none;
 }
@@ -115,24 +138,29 @@ header {
   display: none;
 }
 
-/*First Page Main Section STYLING  */
-
-section {
-  height: 100%;
-}
-
+/* Main Section Layout */
 #first__Section {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 20px;
 }
+
 #first__Section .leftBox {
   flex: 1;
-  height: 100%;
   padding: 12rem 0;
 }
+
+#first__Section .leftBox h1 {
+  font-size: 2.2em;
+}
+
+#first__Section .leftBox h1::selection {
+  color: red;
+}
+
 #first__Section .leftBox h1,
 p {
-  padding: 0 0 1.5rem 0;
+  padding: 0 0 2.6rem 0;
   letter-spacing: 0.1rem;
   text-align: justify;
   line-height: 1.8rem;
@@ -145,17 +173,18 @@ p {
 }
 
 #first__Section .cta-button {
-  padding: 1rem 1.5rem;
-  margin: 4rem 0;
+  padding: 1rem 1.6rem;
   border-radius: 12px;
   box-shadow: 0 0 0.2rem var(--buttonBgColor);
-  color: var(--buttonBgColor);
+  color: var(--textSecondaryColor);
   text-shadow: 0 0 0.1rem #000;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   letter-spacing: 0.1rem;
   text-decoration: none;
   backdrop-filter: blur(100px);
   transition: padding 0.8s ease, box-shadow 0.2s ease;
+  user-select: none;
+  font-weight: 900;
 }
 
 #first__Section .cta-button:hover {
@@ -164,41 +193,42 @@ p {
 }
 
 #first__Section .rightBox {
-  height: 100%;
-  flex: 1;
   overflow: hidden;
-  text-align: center;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 0;
+  height: auto;
 }
 
 #first__Section .rightBox img {
-  max-height: 80%;
   max-width: 80%;
+  max-height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
-/* Second Page Main Section STYLING */
+/* Second Section Layout */
 
 #second__section {
-  display: flex;
-  height: 70%;
-  width: 100%;
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
 #second__section .leftBox {
-  flex: 0.4;
-  height: 100%;
+  /* flex: 0.4; */
   display: flex;
   flex-direction: column;
+  padding: 2rem 0;
+  align-items: center;
   justify-content: center;
-  align-items: flex-end;
-  position: relative;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: inset 0 0 3.2rem var(--textSecondaryColor);
 }
 #second__section .leftBox .imgBox {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   overflow: hidden;
   background-color: var(--buttonBgColor);
@@ -221,15 +251,19 @@ p {
 #second__section .leftBox h3 {
   color: var(--textPrimeColor);
   padding: 1rem;
-  font-weight: 400;
+  font-size: 1.5em;
+  font-weight: 900;
   font-family: sans-serif;
   letter-spacing: 0.1rem;
+  user-select: none;
+  color: var(--textPrimeColor);
+  text-shadow: 0 0 0.2rem #000;
 }
 
 #second__section .leftBox .social-icon {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   position: relative;
 }
@@ -252,23 +286,26 @@ p {
 
 #second__section .rightBox {
   flex: 1;
-  height: 100%;
-  padding: 4rem;
+  padding: 2rem 4rem;
 }
+
 #second__section .rightBox h2 {
-  padding: 0 0 1.5rem 0;
+  padding: 1rem 0;
   letter-spacing: 0.1rem;
-  text-align: justify;
-  line-height: 1.8rem;
   text-shadow: 0 0 0.1rem #000;
   color: var(--buttonBgColor);
+  font-size: 2em;
 }
+
+#second__section .rightBox h2::selection {
+  color: red;
+}
+
 #second__section .rightBox p {
   padding: 0 8rem 0 0;
   letter-spacing: 0.1rem;
   text-align: justify;
   line-height: 1.8rem;
-  /* background-color: red; */
   text-shadow: 0 0 0.1rem #000;
   color: var(--textSecondaryColor);
 }
@@ -332,33 +369,38 @@ footer {
   }
 
   /* Main Styling */
-  #first__Section {
-    flex-direction: column;
-  }
+
   #first__Section .leftBox {
     padding: 1rem 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
   #first__Section .leftBox h1 {
     text-align: initial;
+    font-size: 1.6em;
+    line-height: 1.4em;
   }
 
   #first__Section .rightBox {
     text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 2rem 0;
   }
 
   /* SecondBox Style */
-  #second__section {
-    flex-direction: column;
-    height: 100%;
-  }
 
   #second__section .leftBox {
     justify-content: center;
     align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 
   #second__section .rightBox {
     padding: 20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 
   #second__section .leftBox .social-icon {
@@ -372,7 +414,7 @@ footer {
   /* Footer */
 
   footer {
-    display: none;
+    display: block;
   }
 }
 
@@ -412,48 +454,59 @@ footer {
 
   /* Main Styling */
 
+  #first__Section {
+    gap: 2rem;
+  }
+
   #first__Section .leftBox {
-    width: 50%;
-    padding: 3rem 0;
+    padding: 1rem 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  #first__Section .leftBox h1 {
+    text-align: initial;
+    font-size: 1.6em;
+    line-height: 1.4em;
   }
 
   #first__Section .rightBox {
-    width: 50%;
-    padding: 3rem 0;
+    display: none;
   }
 
   #first__Section .rightBox img {
-    margin: 2rem 0;
-    max-width: 100%;
-    max-height: 100%;
+    object-fit: contain; /* Ensures the image fits without cutting off */
+    height: 100%; /* Image takes full height */
+    width: 100%; /* Image takes full width */
+    object-position: center; /* Centers the image inside the box */
   }
 
-  /* SecondBox */
-  #second__section .leftBox .imgBox {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: var(--buttonBgColor);
-    padding: 0.2rem;
-    margin: 0 1rem;
-    box-shadow: 0 0 0.5rem var(--buttonBgColor);
+  /* SecondBox Style */
+
+  #second__section .leftBox {
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 
-  #second__section .leftBox .imgBox img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.8s ease;
+  #second__section .rightBox {
+    padding: 20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
+
+  #second__section .leftBox .social-icon {
+    justify-content: center;
+  }
+
   #second__section .rightBox p {
     padding: initial;
   }
+
   /* Footer */
 
   footer {
-    display: none;
+    display: block;
   }
 }
 
