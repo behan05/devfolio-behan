@@ -1,0 +1,255 @@
+/* Reset margin, padding, and box-sizing for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define root variables for colors */
+:root {
+  --buttonBgColor: #008b8b; /* Background color for buttons */
+  --textPrimeColor: #fff; /* Primary text color */
+  --textSecondaryColor: #8d9198; /* Secondary text color */
+}
+
+/* Set the width and height to occupy the entire viewport */
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Apply general styling for the body */
+body {
+  font-family: "Poppins", serif; /* Set the font to Poppins */
+  font-weight: 400; /* Normal font weight */
+  font-style: normal; /* Default font style */
+  background-color: #212a36; /* Dark background color */
+  overflow-x: hidden;
+}
+
+/* Highlight the selected text in paragraphs */
+p::selection {
+  color: var(--buttonBgColor); /* Change text color on selection */
+}
+
+/* Style the header */
+header {
+  color: var(--textPrimeColor); /* Primary text color */
+  padding: 1.5rem; /* Add padding around the header */
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Align items vertically */
+  user-select: none; /* Disable text selection */
+  position: relative; /* Relative position for stacking */
+  z-index: 999; /* High stacking order */
+}
+
+/* Header logo styling */
+#header__logo {
+  font-size: 1.3em; /* Increase font size */
+  font-weight: 600; /* Semi-bold font */
+  font-family: "Poppins", serif; /* Set font family */
+}
+
+/* Color styling for a specific span inside the logo */
+#header__logo span {
+  color: var(--buttonBgColor); /* Button background color */
+}
+
+/* Styling for header menu lists */
+.header__menu ul {
+  list-style-type: none; /* Remove bullet points */
+  display: flex; /* Display items in a row */
+}
+
+/* Styling for header menu list items */
+.header__menu li {
+  margin: 0 1em; /* Add horizontal margin */
+  position: relative; /* Position for dropdown */
+  padding: 0.5rem 1.2rem; /* Add padding */
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease; /* Add smooth effects */
+}
+
+/* Specific ID styling for social icons in the menu */
+.header__menu ul #social-icon {
+  color: var(--buttonBgColor); /* Button background color */
+}
+
+/* Hover effect for menu items */
+.header__menu li:hover {
+  box-shadow: 0 0 0.1rem 0.1rem #38465a; /* Add shadow */
+  border-radius: 12px; /* Round corners */
+}
+
+/* Anchor styling inside menu items */
+.header__menu a {
+  color: var(--textSecondaryColor); /* Secondary text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.1em; /* Set font size */
+  transition: color 0.3s ease; /* Smooth color transition */
+  letter-spacing: 0.1rem; /* Space between letters */
+}
+
+/* Hover effect for anchor tags */
+.header__menu a:hover {
+  color: var(--buttonBgColor); /* Button background color */
+}
+
+/* Styling for dropdown menu inside header */
+.header__menu li ul {
+  display: none; /* Hide dropdown initially */
+  position: absolute; /* Position relative to parent */
+  top: 100%; /* Place below parent item */
+  left: 0; /* Align to the left */
+  background-color: #262c35; /* Dark background color */
+  list-style-type: none; /* Remove bullet points */
+  border-radius: 12px; /* Round corners */
+  box-shadow: 0 0 0.1rem 0.1rem #38465a; /* Add shadow */
+}
+
+/* Show dropdown menu on hover */
+.header__menu li:hover > ul {
+  display: block; /* Show dropdown */
+}
+
+/* Style individual dropdown items */
+.header__menu li ul li {
+  margin: 5px 0; /* Add vertical margin */
+}
+
+/* Style anchor tags in dropdown */
+.header__menu li ul li a {
+  color: var(--textPrimeColor); /* Primary text color */
+  font-size: 1em; /* Set font size */
+  letter-spacing: 0.1rem; /* Space between letters */
+}
+
+/* Hover effect for dropdown anchor tags */
+.header__menu li ul li a:hover {
+  color: var(--buttonBgColor); /* Button background color */
+}
+
+/* Hide menu icons by default */
+.openMenu {
+  display: none;
+}
+.closeMenu {
+  display: none;
+}
+
+/* Footer STYLING */
+
+footer {
+  background-color: #181e27;
+  color: var(--textPrimeColor);
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links a {
+  color: var(--textPrimeColor);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* For phones (up to 600px) */
+@media only screen and (max-width: 600px) {
+  .header__menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5rem;
+  }
+
+  .header__menu ul {
+    flex-direction: column;
+    backdrop-filter: blur(12px);
+    box-shadow: inset 0 0 0.1rem 0.1rem #38465a;
+    border-radius: 12px;
+  }
+
+  .header__menu ul li {
+    margin: 0.2rem 0;
+  }
+
+  .openMenu {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .closeMenu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  /* Footer */
+
+  footer {
+    display: block;
+  }
+}
+
+/* For tablets and laptops (601px to 1024px) */
+@media only screen and (min-width: 601px) and (max-width: 1397px) {
+  .header__menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5rem;
+  }
+
+  .header__menu ul {
+    flex-direction: column;
+    backdrop-filter: blur(12px);
+    box-shadow: inset 0 0 0.1rem 0.1rem #38465a;
+    border-radius: 12px;
+  }
+
+  .header__menu ul li {
+    margin: 0.2rem 0;
+  }
+
+  .openMenu {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .closeMenu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  /* Footer */
+
+  footer {
+    display: block;
+  }
+}
+
+@media (min-width: 1398px) {
+  .openMenu,
+  .closeMenu {
+    display: none;
+  }
+  .header__menu {
+    display: block;
+  }
+}
