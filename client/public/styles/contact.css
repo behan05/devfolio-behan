@@ -118,6 +118,8 @@ header {
 #contact {
   padding: 50px;
   text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .contact-container h2 {
@@ -139,6 +141,7 @@ header {
   margin: 0 auto;
   padding: 1rem 0;
   text-align: left;
+
 }
 
 .contact-form label {
@@ -267,6 +270,10 @@ header {
     font-size: 1.5rem;
     cursor: pointer;
   }
+  #contact {
+    padding: 10px;
+  }
+
 }
 
 /* For tablets and laptops (601px to 1024px) */
