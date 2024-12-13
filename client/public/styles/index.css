@@ -336,6 +336,9 @@ footer {
 
 /* For phones (up to 600px) */
 @media only screen and (max-width: 600px) {
+  body {
+    background: linear-gradient(to right, #360033, #0b8793);
+  }
   .header__menu {
     display: none;
     flex-direction: column;
@@ -415,6 +418,7 @@ footer {
 
   footer {
     display: block;
+    background: linear-gradient(to bottom, #360033 30%, #0b8793);
   }
 }
 

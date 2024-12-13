@@ -143,7 +143,7 @@ header {
 
 .container {
   max-width: 900px;
-  background-color: #b3aeae;
+  background-color: rgba(179, 174, 174, 0.8);
   backdrop-filter: blur(12px);
   box-shadow: 0 0 1rem 0.1rem #000;
   margin: 1rem auto;
@@ -363,6 +363,9 @@ footer {
 
 /* For phones (up to 600px) */
 @media only screen and (max-width: 600px) {
+  body {
+    background: linear-gradient(to right, #360033, #0b8793);
+  }
   .header__menu {
     display: none;
     flex-direction: column;
@@ -399,10 +402,13 @@ footer {
 
   footer {
     display: block;
+    background: linear-gradient(to bottom, #360033 30%, #0b8793);
   }
 
   .container {
     padding: 0 0.1em;
+    background-color: rgba(32, 178, 170, 0.1);
+    color: var(--textPrimeColor);
   }
   .container header {
     grid-template-columns: 1fr;

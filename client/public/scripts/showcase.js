@@ -38,33 +38,6 @@ function headerGsap() {
     })
 }
 
-function downloadResume() {
-    const downloadBtn = document.querySelector("button");
-    const toast = document.querySelector("#toast");
-
-    downloadBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        // Create a link element for the download
-        const anchor = document.createElement("a");
-        anchor.href = "https://raw.githubusercontent.com/behan05/images/main/Behan-kumar-resume.pdf"; // Raw file URL
-        anchor.download = "Behan_Kumar_Resume.pdf"; // Set the filename for download
-
-        // Append to body and trigger a click event to download
-        document.body.appendChild(anchor);
-        anchor.click();
-        document.body.removeChild(anchor);
-
-        // Show the toast message
-        toast.style.display = "block";
-
-        // Hide the toast message after 3 seconds
-        setTimeout(() => {
-            toast.style.display = "none";
-        }, 3000);
-    });
-}
-
 
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -72,5 +45,4 @@ window.addEventListener("DOMContentLoaded", () => {
     closeMenuIcon.style.display = "none";
     menuButton();
     headerGsap();
-    downloadResume();
 })
