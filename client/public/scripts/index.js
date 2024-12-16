@@ -48,8 +48,7 @@ function firstBox() {
 
     tl.from(".rightBox img", {
         scale: 0,
-        opacity: 0,
-        duration: 2
+        opacity: 0
     })
 }
 
