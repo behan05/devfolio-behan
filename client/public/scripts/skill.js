@@ -43,7 +43,7 @@ function skillSection() {
     gsap.from(".skill", {
         y: -200,
         opacity: 0,
-        stagger: 0.2
+        stagger: 0.1
     })
 }
 

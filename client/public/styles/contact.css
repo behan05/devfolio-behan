@@ -20,7 +20,7 @@ body {
   font-family: "Poppins", serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #212a36;
+  background-color: #000;
   user-select: none;
 }
 
@@ -81,7 +81,7 @@ header {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #262c35;
+  background-color: #000;
   list-style-type: none;
   border-radius: 12px;
   box-shadow: 0 0 0.1rem 0.1rem #38465a;
@@ -240,7 +240,7 @@ header {
 /* Footer STYLING */
 
 footer {
-  background-color: #181e27;
+  background-color: #090909;
   color: var(--textPrimeColor);
   padding: 20px;
   text-align: center;
@@ -265,9 +265,9 @@ footer {
 
 /* For phones (up to 600px) */
 @media only screen and (max-width: 600px) {
-  body {
+  /* body {
     background: linear-gradient(to right, #360033, #0b8793);
-  }
+  } */
   .header__menu {
     display: none;
     flex-direction: column;
@@ -303,9 +303,9 @@ footer {
     padding: 10px;
   }
 
-  footer {
+  /* footer {
     background: linear-gradient(to bottom, #360033 30%, #0b8793);
-  }
+  } */
 }
 
 /* For tablets and laptops (601px to 1024px) */

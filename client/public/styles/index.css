@@ -24,7 +24,7 @@ body {
   font-family: "Poppins", serif; /* Set the font to Poppins */
   font-weight: 400; /* Normal font weight */
   font-style: normal; /* Default font style */
-  background-color: #212a36; /* Dark background color */
+  background-color: #000; /* Dark background color */
   overflow-x: hidden;
 }
 
@@ -102,7 +102,7 @@ header {
   position: absolute; /* Position relative to parent */
   top: 100%; /* Place below parent item */
   left: 0; /* Align to the left */
-  background-color: #262c35; /* Dark background color */
+  background-color: #000; /* Dark background color */
   list-style-type: none; /* Remove bullet points */
   border-radius: 12px; /* Round corners */
   box-shadow: 0 0 0.1rem 0.1rem #38465a; /* Add shadow */
@@ -189,7 +189,7 @@ p {
 
 #first__Section .cta-button:hover {
   padding: 1rem 2rem;
-  box-shadow: 0 0 0.4rem var(--textPrimeColor);
+  box-shadow: inset 0 0 0.4rem var(--buttonBgColor);
 }
 
 #first__Section .rightBox {
@@ -224,7 +224,11 @@ p {
   justify-content: center;
   height: auto;
   border-radius: 12px;
-  box-shadow: inset 0 0 3.2rem var(--textSecondaryColor);
+  box-shadow: inset 0 0 0.4rem darkcyan;
+  transition: box-shadow 0.3s ease;
+}
+#second__section .leftBox:hover {
+  box-shadow: inset 0 0 0.6rem darkcyan;
 }
 #second__section .leftBox .imgBox {
   width: 250px;
@@ -313,7 +317,7 @@ p {
 /* Footer STYLING */
 
 footer {
-  background-color: #181e27;
+  background-color: #090909;
   color: var(--textPrimeColor);
   padding: 20px;
   text-align: center;
@@ -336,9 +340,9 @@ footer {
 
 /* For phones (up to 600px) */
 @media only screen and (max-width: 600px) {
-  body {
+  /* body {
     background: linear-gradient(to right, #360033, #0b8793);
-  }
+  } */
   .header__menu {
     display: none;
     flex-direction: column;
@@ -418,7 +422,7 @@ footer {
 
   footer {
     display: block;
-    background: linear-gradient(to bottom, #360033 30%, #0b8793);
+    /* background: linear-gradient(to bottom, #360033 30%, #0b8793); */
   }
 }
 
