@@ -27,10 +27,9 @@ function menuButton() {
 function headerGsap() {
     const tl = gsap.timeline()
     tl.from("#header__logo", {
-        x: -200,
-        duration: 1,
-        rotation: 360,
-
+        y: -200,
+        opacity: 0,
+        duration: 0.6,
     })
     tl.from(".header__menu ul li", {
         y: -100,
