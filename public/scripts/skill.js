@@ -27,9 +27,9 @@ function menuButton() {
 function headerGsap() {
     const tl = gsap.timeline()
     tl.from("#header__logo", {
-        x: -200,
-        duration: 1,
-        rotation: 360,
+        y: -200,
+        opacity: 0,
+        duration: 0.6,
 
     })
     tl.from(".header__menu ul li", {
@@ -38,33 +38,28 @@ function headerGsap() {
     })
 }
 
-function firstBox() {
-    const tl = gsap.timeline()
-    tl.from(".leftBox h1", {
-        x: -400,
-        opacity: 0,
-        duration: 1
-    })
 
-    tl.from(".rightBox img", {
-        scale: 0,
-        opacity: 0
+function skillSection() {
+    gsap.from(".skill", {
+        y: -200,
+        opacity: 0,
+        stagger: 0.1
     })
 }
 
-function secondBoxTrigger() {
-    gsap.from("#second__section", {
-        scale: 0,
+function projects() {
+    gsap.from(".project", {
+        x: -400,
         opacity: 0,
-        duration: 0.2, // Add duration for better effect
-        ease: "slow", // Add easing for smoother animation
+        stagger: 0.4,
         scrollTrigger: {
-            trigger: "#second__section",
-            start: "top 180%", // Trigger starts when section is near bottom of the viewport
-            end: "top 40%", // Ends when section is closer to the top of the viewport
-            scrub: 1, // Smooth scrubbing effect
-        },
-    });
+            trigger: ".project__section",
+            start: "top 70%",
+            end: "top 50%",
+            pin: true,
+            scrub: 2,
+        }
+    })
 }
 
 
@@ -73,6 +68,6 @@ window.addEventListener("DOMContentLoaded", () => {
     closeMenuIcon.style.display = "none";
     menuButton();
     headerGsap();
-    firstBox();
-    secondBoxTrigger();
+    skillSection();
+    projects();
 })

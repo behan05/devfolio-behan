@@ -1,3 +1,9 @@
+gsap.registerPlugin(ScrollTrigger);
+
+document.querySelector("img").addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+})
+
 function menuButton() {
     const openMenuIcon = document.querySelector(".openMenu");
     const closeMenuIcon = document.querySelector(".closeMenu");
@@ -19,30 +25,24 @@ function menuButton() {
 
 // GSAP Code.
 function headerGsap() {
-    gsap.from("#header__logo", {
-        x: -200,
-        duration: 1,
-        rotation: 360,
+    const tl = gsap.timeline()
+    tl.from("#header__logo", {
+        y: -200,
+        opacity: 0,
+        duration: 0.6,
 
     })
-    gsap.from(".header__menu ul li", {
+    tl.from(".header__menu ul li", {
         y: -100,
         stagger: 0.1
     })
 }
 
-function contact() {
-    gsap.from("#contact", {
-        scale: 0,
-        opacity: 0,
-        duration: 1,
-    })
-}
+
 
 window.addEventListener("DOMContentLoaded", () => {
     const closeMenuIcon = document.querySelector(".closeMenu");
     closeMenuIcon.style.display = "none";
     menuButton();
     headerGsap();
-    contact();
 })
