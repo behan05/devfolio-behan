@@ -13,7 +13,6 @@ function menuButton() {
         closeMenuIcon.style.display = "block";
         openMenuIcon.style.display = "none";
         header__menu.style.display = "block";
-
     })
     closeMenuIcon.addEventListener("click", (e) => {
         closeMenuIcon.style.display = "none";
