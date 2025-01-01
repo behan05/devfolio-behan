@@ -47,17 +47,25 @@ header {
 
 /* Header logo styling */
 #header__logo {
-  font-size: 1.3em; /* Increase font size */
+  max-width: 70px; /* Set maximum width */
+  max-height: 70px; /* Set maximum height */
+}
+
+#header__logo img {
+  width: 100%; /* Set image width */
+  height: 100%; /* Set image height */
+  border-radius: 8px;
+  object-fit: cover;
+  filter: drop-shadow(0 0 0.1rem #000); /* Add shadow */
+}
+
+/* Header menu styling */
+.header__menu {
+  font-size: 1.1em; /* Increase font size */
   font-weight: 600; /* Semi-bold font */
   font-family: "Poppins", serif; /* Set font family */
 }
 
-/* Color styling for a specific span inside the logo */
-#header__logo span {
-  color: var(--buttonBgColor); /* Button background color */
-}
-
-/* Styling for header menu lists */
 .header__menu ul {
   list-style-type: none; /* Remove bullet points */
   display: flex; /* Display items in a row */
@@ -105,7 +113,7 @@ header {
   background-color: #000; /* Dark background color */
   list-style-type: none; /* Remove bullet points */
   border-radius: 12px; /* Round corners */
-  box-shadow: 0 0 0.1rem 0.1rem #38465a; /* Add shadow */
+  box-shadow: 0 0 0.1rem #38465a; /* Add shadow */
 }
 
 /* Show dropdown menu on hover */
@@ -116,6 +124,7 @@ header {
 /* Style individual dropdown items */
 .header__menu li ul li {
   margin: 5px 0; /* Add vertical margin */
+  width: fit-content;
 }
 
 /* Style anchor tags in dropdown */
@@ -147,7 +156,7 @@ header {
 
 #first__Section .leftBox {
   flex: 1;
-  padding: 12rem 0;
+  padding: 8rem 0;
 }
 
 #first__Section .leftBox h1 {
@@ -174,7 +183,7 @@ p {
 
 #first__Section .cta-button {
   padding: 1rem 1.6rem;
-  box-shadow: 0 0 0.2rem var(--buttonBgColor);
+  box-shadow: 0 0 0.1rem var(--buttonBgColor);
   color: var(--textSecondaryColor);
   text-shadow: 0 0 0.1rem #000;
   font-size: 1.2rem;
@@ -341,16 +350,15 @@ footer {
 
 /* For phones (up to 600px) */
 @media only screen and (max-width: 600px) {
-  /* body {
-    background: linear-gradient(to right, #360033, #0b8793);
-  } */
   .header__menu {
     display: none;
     flex-direction: column;
     position: absolute;
-    left: 0;
+    left: calc(100% - fit-content);
     right: 0;
-    top: 5rem;
+    top: 6rem;
+    width: fit-content;
+    height: auto;
   }
 
   .header__menu ul {
@@ -382,18 +390,28 @@ footer {
     padding: 1rem 0;
     grid-column-start: 1;
     grid-column-end: 3;
+    order: 2;
   }
   #first__Section .leftBox h1 {
     text-align: initial;
     font-size: 1.6em;
     line-height: 1.4em;
+    display: none;
   }
 
   #first__Section .rightBox {
     text-align: center;
     grid-column-start: 1;
     grid-column-end: 3;
-    padding: 2rem 0;
+    padding: 0rem 0;
+    order: 1;
+  }
+
+  #first__Section .rightBox img {
+    object-fit: contain; /* Ensures the image fits without cutting off */
+    height: 100%; /* Image takes full height */
+    width: 100%; /* Image takes full width */
+    object-position: center; /* Centers the image inside the box */
   }
 
   /* SecondBox Style */
@@ -423,7 +441,6 @@ footer {
 
   footer {
     display: block;
-    /* background: linear-gradient(to bottom, #360033 30%, #0b8793); */
   }
 }
 
@@ -433,9 +450,10 @@ footer {
     display: none;
     flex-direction: column;
     position: absolute;
-    left: 0;
+    left: calc(100% - fit-content);
     right: 0;
-    top: 5rem;
+    top: 6rem;
+    width: fit-content;
   }
 
   .header__menu ul {

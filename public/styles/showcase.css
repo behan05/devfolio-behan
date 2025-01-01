@@ -15,8 +15,8 @@
 /* Set the width and height to occupy the entire viewport */
 html,
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 /* Apply general styling for the body */
@@ -47,17 +47,25 @@ header {
 
 /* Header logo styling */
 #header__logo {
-  font-size: 1.3em; /* Increase font size */
+  max-width: 70px; /* Set maximum width */
+  max-height: 70px; /* Set maximum height */
+}
+
+#header__logo img {
+  width: 100%; /* Set image width */
+  height: 100%; /* Set image height */
+  border-radius: 8px;
+  object-fit: cover;
+  filter: drop-shadow(0 0 0.1rem #000); /* Add shadow */
+}
+
+/* Header menu styling */
+.header__menu {
+  font-size: 1.1em; /* Increase font size */
   font-weight: 600; /* Semi-bold font */
   font-family: "Poppins", serif; /* Set font family */
 }
 
-/* Color styling for a specific span inside the logo */
-#header__logo span {
-  color: var(--buttonBgColor); /* Button background color */
-}
-
-/* Styling for header menu lists */
 .header__menu ul {
   list-style-type: none; /* Remove bullet points */
   display: flex; /* Display items in a row */
@@ -105,7 +113,7 @@ header {
   background-color: #000; /* Dark background color */
   list-style-type: none; /* Remove bullet points */
   border-radius: 12px; /* Round corners */
-  box-shadow: 0 0 0.1rem 0.1rem #38465a; /* Add shadow */
+  box-shadow: 0 0 0.1rem #38465a; /* Add shadow */
 }
 
 /* Show dropdown menu on hover */
@@ -228,16 +236,15 @@ footer {
 
 /* For phones (up to 600px) */
 @media only screen and (max-width: 600px) {
-  /* body {
-    background: linear-gradient(to right, #360033, #0b8793);
-  } */
+
   .header__menu {
     display: none;
     flex-direction: column;
     position: absolute;
-    left: 0;
+    left: calc(100% - fit-content);
     right: 0;
-    top: 5rem;
+    top: 6rem;
+    width: fit-content;
   }
 
   .header__menu ul {
@@ -277,9 +284,10 @@ footer {
     display: none;
     flex-direction: column;
     position: absolute;
-    left: 0;
+    left: calc(100% fit-content);
     right: 0;
-    top: 5rem;
+    top: 6rem;
+    width: fit-content;
   }
 
   .header__menu ul {

@@ -1,12 +1,8 @@
+/* Reset margin, padding, and box-sizing for all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-html,
-body {
-  width: 100%;
-  height: 100%;
 }
 
 /* Define root variables for colors */
@@ -16,93 +12,130 @@ body {
   --textSecondaryColor: #8d9198; /* Secondary text color */
 }
 
+/* Set the width and height to occupy the entire viewport */
+html,
 body {
-  font-family: "Poppins", serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #000;
-  user-select: none;
+  width: 100%;
+  height: 100%;
 }
 
+/* Apply general styling for the body */
+body {
+  font-family: "Poppins", serif; /* Set the font to Poppins */
+  font-weight: 400; /* Normal font weight */
+  font-style: normal; /* Default font style */
+  background-color: #000; /* Dark background color */
+  overflow-x: hidden;
+}
+
+/* Highlight the selected text in paragraphs */
+p::selection {
+  color: var(--buttonBgColor); /* Change text color on selection */
+}
+
+/* Style the header */
 header {
-  color: var(--textPrimeColor);
-  padding: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  z-index: 999;
+  color: var(--textPrimeColor); /* Primary text color */
+  padding: 1.5rem; /* Add padding around the header */
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Align items vertically */
+  user-select: none; /* Disable text selection */
+  position: relative; /* Relative position for stacking */
+  z-index: 999; /* High stacking order */
 }
 
+/* Header logo styling */
 #header__logo {
-  font-size: 1.2em;
-  font-weight: 600;
-  font-family: "Poppins", serif;
+  max-width: 70px; /* Set maximum width */
+  max-height: 70px; /* Set maximum height */
 }
-#header__logo span {
-  color: var(--buttonBgColor);
+
+#header__logo img {
+  width: 100%; /* Set image width */
+  height: 100%; /* Set image height */
+  border-radius: 8px;
+  object-fit: cover;
+  filter: drop-shadow(0 0 0.1rem #000); /* Add shadow */
+}
+
+/* Header menu styling */
+.header__menu {
+  font-size: 1.1em; /* Increase font size */
+  font-weight: 600; /* Semi-bold font */
+  font-family: "Poppins", serif; /* Set font family */
 }
 
 .header__menu ul {
-  list-style-type: none;
-  display: flex;
+  list-style-type: none; /* Remove bullet points */
+  display: flex; /* Display items in a row */
 }
 
+/* Styling for header menu list items */
 .header__menu li {
-  margin: 0 1em;
-  position: relative;
-  padding: 0.5rem 1.2rem;
-  transition: box-shadow 0.3s ease, border-radius 0.3s ease;
+  margin: 0 1em; /* Add horizontal margin */
+  position: relative; /* Position for dropdown */
+  padding: 0.5rem 1.2rem; /* Add padding */
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease; /* Add smooth effects */
 }
+
+/* Specific ID styling for social icons in the menu */
 .header__menu ul #social-icon {
-  color: var(--buttonBgColor);
+  color: var(--buttonBgColor); /* Button background color */
 }
 
+/* Hover effect for menu items */
 .header__menu li:hover {
-  box-shadow: 0 0 0.1rem 0.1rem #38465a;
-  border-radius: 12px;
+  box-shadow: 0 0 0.1rem 0.1rem #38465a; /* Add shadow */
+  border-radius: 12px; /* Round corners */
 }
 
+/* Anchor styling inside menu items */
 .header__menu a {
-  color: var(--textSecondaryColor);
-  text-decoration: none;
-  font-size: 1.1em;
-  transition: color 0.3s ease;
-  letter-spacing: 0.1rem;
+  color: var(--textSecondaryColor); /* Secondary text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.1em; /* Set font size */
+  transition: color 0.3s ease; /* Smooth color transition */
+  letter-spacing: 0.1rem; /* Space between letters */
 }
 
+/* Hover effect for anchor tags */
 .header__menu a:hover {
-  color: var(--buttonBgColor);
+  color: var(--buttonBgColor); /* Button background color */
 }
 
+/* Styling for dropdown menu inside header */
 .header__menu li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #000;
-  list-style-type: none;
-  border-radius: 12px;
-  box-shadow: 0 0 0.1rem 0.1rem #38465a;
+  display: none; /* Hide dropdown initially */
+  position: absolute; /* Position relative to parent */
+  top: 100%; /* Place below parent item */
+  left: 0; /* Align to the left */
+  background-color: #000; /* Dark background color */
+  list-style-type: none; /* Remove bullet points */
+  border-radius: 12px; /* Round corners */
+  box-shadow: 0 0 0.1rem #38465a; /* Add shadow */
 }
 
+/* Show dropdown menu on hover */
 .header__menu li:hover > ul {
-  display: block;
+  display: block; /* Show dropdown */
 }
 
+/* Style individual dropdown items */
 .header__menu li ul li {
-  margin: 5px 0;
+  margin: 5px 0; /* Add vertical margin */
 }
 
+/* Style anchor tags in dropdown */
 .header__menu li ul li a {
-  color: var(--textPrimeColor);
-  font-size: 1em;
-  letter-spacing: 0.1rem;
+  color: var(--textPrimeColor); /* Primary text color */
+  font-size: 1em; /* Set font size */
+  letter-spacing: 0.1rem; /* Space between letters */
 }
 
+/* Hover effect for dropdown anchor tags */
 .header__menu li ul li a:hover {
-  color: var(--buttonBgColor);
+  color: var(--buttonBgColor); /* Button background color */
 }
 
 /* Menu Icons */
@@ -265,16 +298,14 @@ footer {
 
 /* For phones (up to 600px) */
 @media only screen and (max-width: 600px) {
-  /* body {
-    background: linear-gradient(to right, #360033, #0b8793);
-  } */
   .header__menu {
     display: none;
     flex-direction: column;
     position: absolute;
-    left: 0;
+    left: calc(100% - fit-content);
     right: 0;
-    top: 5rem;
+    top: 6rem;
+    width: fit-content;
   }
 
   .header__menu ul {
@@ -314,9 +345,10 @@ footer {
     display: none;
     flex-direction: column;
     position: absolute;
-    left: 0;
+    left: calc(100% - fit-content);
     right: 0;
-    top: 5rem;
+    top: 6rem;
+    width: fit-content;
   }
 
   .header__menu ul {
